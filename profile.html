@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Portfolio</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #333; text-align: center; }
+    header { background: peachpuff; padding: 20px; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+    nav a:hover { color: purple; }
+    section { padding: 40px; max-width: 900px; margin: auto; }
+    h2 { margin-bottom: 20px; }
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .skill { border: 2px solid peachpuff; border-radius: 12px; padding: 20px; background: #fffaf5; }
+    .bar { background: #ddd; border-radius: 20px; overflow: hidden; margin-top: 10px; }
+    .bar span { display: block; height: 20px; background: purple; }
+    footer { background: #333; color: white; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Skills</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('profile') }}">Profile</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Programming Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>HTML</h3>
+        <div class="bar"><span style="width: 90%;"></span></div>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <div class="bar"><span style="width: 80%;"></span></div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="bar"><span style="width: 70%;"></span></div>
+      </div>
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="bar"><span style="width: 75%;"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📞 Phone | ✉ Email</p>
+  </footer>
+</body>
+</html>

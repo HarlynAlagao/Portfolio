@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Portfolio</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fff; text-align: center; }
+    header { background: peachpuff; padding: 20px; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+    nav a:hover { color: purple; }
+    section { padding: 50px; }
+    img.profile { width: 180px; border-radius: 50%; border: 4px solid peachpuff; margin-top: 20px; }
+    footer { background: #333; color: white; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Harlyn Alagao</h1>
+    <p>Web Developer</p>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('profile') }}">Profile</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Welcome to My Portfolio</h2>
+    <p>This is my personal portfolio website where you can know more about me, my projects, and my skills.</p>
+    <img src="{{ url_for('static', filename='images/harlyn.jpeg') }}" alt="My Profile" class="profile">
+  </section>
+
+  <footer>
+    <p>📞 Phone | ✉ Email</p>
+  </footer>
+</body>
+</html>
